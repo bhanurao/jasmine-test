@@ -1,0 +1,56 @@
+<!-- ===================== Navigarion header =================== -->
+<nav id="header" class="navbar navbar-light bg-faded">
+    <a class="navbar-brand" href="/MobileWeb-war/"><i class="icon-logors"></i></a>
+    <ul class="nav navbar-nav pull-xs-right">
+        <li class="nav-item">
+            <a id="btnUserLogin" class="navbar-toggler nav-link collapsed" aria-expanded="true" aria-controls="userLogin" data-toggle="collapse" href="#userLogin">
+                <i class="icon-user" data-session="false"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/MobileWeb-war/basket.html"><i class="icon-basket"></i></a>
+        </li>
+        <li class="nav-item">
+            <a id="btnMegaMenu" class="navbar-toggler nav-link collapsed" aria-expanded="false" aria-controls="megaMenu" data-toggle="collapse" href="#megaMenu">
+                <i class="icon-menu"></i>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<!-- ===================== Login NAV wrapper =================== -->
+<div id="userLogin" class="login-nav-wrapper collapse in" aria-expanded="true">
+    <div class="list-group">
+        <a class="list-group-item js-menu-login" href="#" data-toggle="modal" data-target="#loginModal" data-session="false">Login</a>
+        <a class="list-group-item js-menu-logout" href="#" data-toggle="modal" data-target="#logoutModal" data-session="false">Logout</a>
+        <a class="list-group-item js-menu-register" href="#" data-session="false">Register</a>
+    </div>
+</div>
+
+<!-- ===================== Login dialog box =================== -->
+<div class="modal fade in" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true" style="display: block;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <section>
+                <h5 class="pg-title">Login</h5>
+                <p hidden="true" class="text-danger js-login-service-unavailable">An error has occurred during login.Please try again later.</p>
+                <p hidden="true" class="text-danger js-userlogin-err-msg"></p>
+                <section>
+                    <fieldset class="form-group">
+                        <label for="userlogin-username">Username<span class="text-danger mar-l-4">*</span></label>
+                        <input class="form-control" id="userlogin-username" name="username">
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="userlogin-password">Password<span class="text-danger mar-l-4">*</span></label>
+                        <input class="form-control" id="userlogin-password" name="password" type="password">
+                    </fieldset>
+                    <a href="http://localhost/web/authHome.html">Forgotten your username or password?</a>
+                    <div class="text-xs-right m-t-1">
+                        <a href="#" class="btn btn-secondary btn-md pull-xs-left" data-dismiss="modal" aria-label="Close">Cancel</a>
+                        <input type="button" value="Login" class="btn btn-primary btn-md js-btn-userlogin">
+                    </div>
+                </section>
+            </section>
+        </div>
+    </div>
+</div>

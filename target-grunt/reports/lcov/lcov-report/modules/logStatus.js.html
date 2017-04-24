@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for modules\logStatus.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">modules/</a> logStatus.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">6.9% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>2/29</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">11.11% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">6.9% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>2/29</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function() {
+    'use strict';
+&nbsp;
+    RSM.Modules.LogStatus = {
+        refManIcon: null,
+        refLoginOption: null,
+        refLogoutOption: null,
+        refRegisterOption: null,
+        isChecked: false,
+&nbsp;
+        hasSoldTo: <span class="fstat-no" title="function not covered" >function() {</span>
+            // check use response cookie has sold to status
+<span class="cstat-no" title="statement not covered" >            var userAccepted = RSM.Utils.Cookies.getCookie('status');</span>
+<span class="cstat-no" title="statement not covered" >            return (userAccepted &gt;= 3);</span>
+        },
+&nbsp;
+        checkStatus: <span class="fstat-no" title="function not covered" >function() {</span>
+            // check status cookie to enable man icon
+<span class="cstat-no" title="statement not covered" >            var userAccepted = RSM.Utils.Cookies.getCookie('status');</span>
+<span class="cstat-no" title="statement not covered" >            return ($.isNumeric(userAccepted));</span>
+        },
+&nbsp;
+        updateIcon: <span class="fstat-no" title="function not covered" >function(userStatus) {</span>
+            // set data session attribute which is used by CSS query
+            // to turn icon green
+<span class="cstat-no" title="statement not covered" >            this.refManIcon.attr('data-session', userStatus);</span>
+<span class="cstat-no" title="statement not covered" >            this.refLoginOption.attr('data-session', userStatus);</span>
+<span class="cstat-no" title="statement not covered" >            this.refLogoutOption.attr('data-session', userStatus);</span>
+            // change true to userStatus - currently disabled
+            //this.refRegisterOption.attr('data-session', true);
+<span class="cstat-no" title="statement not covered" >            this.refRegisterOption.attr('data-session', userStatus);</span>
+        },
+&nbsp;
+        updateIconColor: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >            var userStatus;</span>
+<span class="cstat-no" title="statement not covered" >            userStatus = this.checkStatus();</span>
+<span class="cstat-no" title="statement not covered" >            RSM.Modules.LogStatus.updateIcon(userStatus);</span>
+            //Make sure status matches with server if cookie is there
+<span class="cstat-no" title="statement not covered" >            if (userStatus &amp;&amp; !this.isChecked) {</span>
+<span class="cstat-no" title="statement not covered" >                this.checkUserLoggedOn();</span>
+            }
+        },
+&nbsp;
+        checkUserLoggedOn: <span class="fstat-no" title="function not covered" >function() {</span>
+            // Check user session is active on server
+<span class="cstat-no" title="statement not covered" >            var _url, _type;</span>
+<span class="cstat-no" title="statement not covered" >            _url = contextPath + '/services/login/status/v1';</span>
+<span class="cstat-no" title="statement not covered" >            _type = 'GET';</span>
+<span class="cstat-no" title="statement not covered" >            RSM.Utils.AjaxService.processXHR(_url, _type,</span>
+                RSM.Modules.LogStatus.updateUserStatusAjax);
+        },
+&nbsp;
+        updateUserStatusAjax: <span class="fstat-no" title="function not covered" >function(data) {</span>
+<span class="cstat-no" title="statement not covered" >            RSM.Modules.LogStatus.isChecked = true;</span>
+<span class="cstat-no" title="statement not covered" >            RSM.Modules.LogStatus.updateIcon($.isNumeric(data.Status));</span>
+        },
+&nbsp;
+        init: <span class="fstat-no" title="function not covered" >function(elmIcon, elmLogin, elmLogout, elmRegister, checkIcon) {</span>
+<span class="cstat-no" title="statement not covered" >            this.refManIcon = $(elmIcon);</span>
+<span class="cstat-no" title="statement not covered" >            this.refLoginOption = $(elmLogin);</span>
+<span class="cstat-no" title="statement not covered" >            this.refLogoutOption = $(elmLogout);</span>
+<span class="cstat-no" title="statement not covered" >            this.refRegisterOption = $(elmRegister);</span>
+<span class="cstat-no" title="statement not covered" >            if (this.refManIcon.length &gt; 0 &amp;&amp; checkIcon) {</span>
+<span class="cstat-no" title="statement not covered" >                this.updateIconColor();</span>
+            }
+        }
+    };
+&nbsp;
+}());
+&nbsp;
+<span class="cstat-no" title="statement not covered" >(<span class="fstat-no" title="function not covered" >function() {</span></span>
+    'use strict';
+&nbsp;
+    //call login check to run man green
+<span class="cstat-no" title="statement not covered" >    RSM.Modules.LogStatus.init('.icon-user', '.js-menu-login', '.js-menu-logout', '.js-menu-register', true);</span>
+&nbsp;
+&nbsp;
+}());</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Apr 24 2017 10:42:58 GMT+0100 (GMT Daylight Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
